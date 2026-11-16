@@ -1,0 +1,17 @@
+# Digests for the local compose stack. Mail goes to Mailpit
+# (http://localhost:8025), so any addresses work here.
+timezone: Europe/Berlin
+from: "Crate <crate@example.com>"
+recipients:
+  me: me@example.com
+digests:
+  - name: tuesday
+    title: Berlin shops
+    days: [daily]
+    at: "07:00"
+    to: [me]
+    sections:
+      - title: Hard Wax
+        dig: { from: [hardwax], limit: 10, fast: true }
+      - title: OYE
+        dig: { from: ["oye:new"], limit: 10, fast: true }

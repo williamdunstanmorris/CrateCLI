@@ -1,0 +1,484 @@
+openapi: 3.1.0
+info:
+  title: cratecli API
+  version: "1"
+  summary: Dig for records, keep the good ones, send digests.
+  description: |
+    The HTTP face of cratecli (`cratecli serve`). Every operation is the same
+    one the CLI runs: a dig here is a `cratecli from …` / `cratecli search …`
+    there, with the same validation and the same history.
+
+    **Auth**: when the server has `CRATECLI_API_TOKEN` set, every `/v1` route
+    needs `Authorization: Bearer <token>`. `/healthz`, `/readyz` and
+    `/metrics` are always open.
+
+    **Errors** are RFC 9457 problem details (`application/problem+json`).
+
+    **Slow requests**: digs that look records up on Discogs take a while
+    (about 2.5 s per record without a Discogs token). Use `"fast": true`
+    to skip that, or allow generous client timeouts.
+servers:
+  - url: http://localhost:8080
+security:
+  - bearer: []
+
+paths:
+  /healthz:
+    get:
+      summary: "Liveness: the process is up"
+      security: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: { type: string, example: ok }
+                  version: { type: string }
+  /readyz:
+    get:
+      summary: "Readiness: the database is reachable"
+      security: []
+      responses:
+        "200": { description: Ready }
+        "503": { $ref: "#/components/responses/Problem" }
+  /metrics:
+    get:
+      summary: Prometheus metrics
+      security: []
+      responses:
+        "200":
+          description: Prometheus text format
+          content:
+            text/plain: {}
+
+  /v1/sources:
+    get:
+      summary: Every source (shops, press, radio…) and its sections
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  sources:
+                    type: array
+                    items: { $ref: "#/components/schemas/Source" }
+  /v1/sources/{name}:
+    get:
+      summary: One source
+      parameters:
+        - { name: name, in: path, required: true, schema: { type: string }, example: hardwax }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Source" }
+        "404": { $ref: "#/components/responses/Problem" }
+
+  /v1/digs:
+    post:
+      summary: Run a dig
+      description: |
+        Exactly one of `from` or `search`. From-digs (and random searches)
+        hide records seen before and, when recorded, mark the returned ones
+        seen, just like the CLI.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/DigRequest" }
+            examples:
+              shops:
+                value: { from: ["hardwax", "oye:new"], limit: 20, fast: true }
+              radio:
+                value: { from: ["bbc:late-junction"], episodes: 1, limit: all }
+              search:
+                value: { search: { genre: Pop, year: "2025-2026", sort: want }, limit: 25 }
+      responses:
+        "200":
+          description: The records found
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/DigResponse" }
+        "400": { $ref: "#/components/responses/Problem" }
+    get:
+      summary: Recent digs
+      parameters:
+        - { name: limit, in: query, schema: { type: integer, default: 20 } }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  digs:
+                    type: array
+                    items: { $ref: "#/components/schemas/Dig" }
+  /v1/digs/{id}:
+    get:
+      summary: A past dig with its numbered records
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  dig: { $ref: "#/components/schemas/Dig" }
+                  records:
+                    type: array
+                    items: { $ref: "#/components/schemas/Record" }
+        "404": { $ref: "#/components/responses/Problem" }
+
+  /v1/saved:
+    get:
+      summary: Saved records, newest first
+      parameters:
+        - { name: origin, in: query, schema: { type: string, enum: [crate, youtube] } }
+        - { name: source, in: query, schema: { type: string }, example: hardwax }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  records:
+                    type: array
+                    items: { $ref: "#/components/schemas/Record" }
+    post:
+      summary: Save records from a past dig, by their numbers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [dig_id, numbers]
+              additionalProperties: false
+              properties:
+                dig_id: { type: integer }
+                numbers: { type: array, items: { type: integer, minimum: 1 } }
+                note: { type: string }
+      responses:
+        "200":
+          description: What happened to each record
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  saved:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id: { type: string }
+                        title: { type: string }
+                        result: { type: string, enum: [saved, already saved, note updated] }
+        "400": { $ref: "#/components/responses/Problem" }
+        "404": { $ref: "#/components/responses/Problem" }
+  /v1/saved/{id}:
+    delete:
+      summary: Unsave a record
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: string }, example: rec_53a6b77d1a3f }
+      responses:
+        "204": { description: Unsaved (it stays seen) }
+        "404": { $ref: "#/components/responses/Problem" }
+
+  /v1/seen:
+    get:
+      summary: Seen-history totals, per source, and recent digs
+      responses:
+        "200": { description: OK }
+  /v1/seen/undo:
+    post:
+      summary: Un-see the records first seen in the last dig
+      responses:
+        "200": { description: OK }
+        "409": { $ref: "#/components/responses/Problem" }
+
+  /v1/sync/youtube:
+    post:
+      summary: Pull new YouTube likes into saved records
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              properties:
+                full: { type: boolean, description: Read every like and notice unlikes }
+                dry_run: { type: boolean }
+      responses:
+        "200":
+          description: What the sync did
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/SyncResult" }
+        "503": { $ref: "#/components/responses/Problem" }
+
+  /v1/digests:
+    get:
+      summary: The digests defined in digests.yaml
+      responses:
+        "200": { description: OK }
+        "503": { $ref: "#/components/responses/Problem" }
+  /v1/digests/{name}/preview:
+    get:
+      summary: Build a digest and return the email HTML (nothing sent or marked seen)
+      parameters:
+        - { name: name, in: path, required: true, schema: { type: string } }
+      responses:
+        "200":
+          description: The email body
+          content:
+            text/html: {}
+        "404": { $ref: "#/components/responses/Problem" }
+  /v1/digests/{name}/runs:
+    get:
+      summary: Runs of one digest, e.g. "was it sent today?"
+      description: Asked by a Mac in fallback mode before it sends.
+      parameters:
+        - { name: name, in: path, required: true, schema: { type: string } }
+        - { name: date, in: query, schema: { type: string, format: date }, example: "2026-11-17" }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  runs:
+                    type: array
+                    items: { $ref: "#/components/schemas/DigestRun" }
+  /v1/digest-runs:
+    get:
+      summary: Recent digest runs
+      parameters:
+        - { name: digest, in: query, schema: { type: string } }
+        - { name: date, in: query, schema: { type: string, format: date } }
+        - { name: limit, in: query, schema: { type: integer, default: 50 } }
+      responses:
+        "200": { description: OK }
+    post:
+      summary: Send a digest now, or every digest that's due
+      description: |
+        `{"due": true}` sends each digest scheduled for today whose time has
+        passed and that hasn't been sent yet. It's safe to call repeatedly
+        (e.g. from a scheduler every 15 minutes); nothing is sent twice.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              properties:
+                digest: { type: string, description: One digest by name }
+                due: { type: boolean, description: Every digest due now }
+                to:
+                  type: array
+                  items: { type: string }
+                  description: Send to these instead (recipient names or addresses)
+                dry_run: { type: boolean }
+            examples:
+              due: { value: { due: true } }
+              test: { value: { digest: tuesday, to: [you@example.com] } }
+      responses:
+        "200":
+          description: The runs (an empty list when nothing was due)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  runs:
+                    type: array
+                    items: { $ref: "#/components/schemas/DigestRun" }
+        "502":
+          description: At least one digest failed to send (see runs)
+        "503": { $ref: "#/components/responses/Problem" }
+
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+  responses:
+    Problem:
+      description: An RFC 9457 problem
+      content:
+        application/problem+json:
+          schema:
+            type: object
+            properties:
+              type: { type: string }
+              title: { type: string }
+              status: { type: integer }
+              detail: { type: string }
+  schemas:
+    Limit:
+      description: A number, or "all"
+      oneOf:
+        - { type: integer, minimum: 1 }
+        - { type: string, const: all }
+    DigRequest:
+      type: object
+      additionalProperties: false
+      properties:
+        from:
+          type: array
+          items: { type: string }
+          description: Sources in CLI syntax, e.g. hardwax, "oye:new", "bbc:late-junction", "@berlin"
+          example: ["hardwax", "oye:new"]
+        search: { $ref: "#/components/schemas/SearchRequest" }
+        style: { type: string, description: "From-digs: keep records of this style (loose: house matches Deep House)" }
+        year: { type: string, description: "From-digs: 1995, 1990-1999, 90s, late 80s" }
+        tags: { type: array, items: { type: string }, description: Bandcamp tags }
+        episodes: { type: integer, minimum: 1, description: "Radio: how many recent episodes (default 1)" }
+        limit: { $ref: "#/components/schemas/Limit" }
+        random: { type: boolean }
+        fast: { type: boolean, description: Skip Discogs lookups (search links only) }
+        include_seen: { type: boolean }
+        video_source: { type: string, enum: [auto, discogs, youtube, none] }
+        max_videos: { type: integer }
+        record:
+          type: boolean
+          default: true
+          description: Keep the dig in history (numbers usable with POST /v1/saved; from-digs mark records seen)
+    SearchRequest:
+      type: object
+      additionalProperties: false
+      properties:
+        query: { type: string }
+        artist: { type: string }
+        title: { type: string }
+        label: { type: string }
+        genre: { type: string }
+        style: { type: string }
+        country: { type: string }
+        year: { type: string }
+        media: { type: string }
+        catno: { type: string }
+        track: { type: string }
+        credit: { type: string }
+        type: { type: string, enum: [release, master] }
+        sort: { type: string, enum: [year, title, want, have] }
+        order: { type: string, enum: [asc, desc] }
+        page: { type: integer }
+    DigResponse:
+      type: object
+      properties:
+        dig_id: { type: integer, description: Absent when record=false }
+        stats:
+          type: object
+          properties:
+            fetched: { type: integer }
+            hidden_seen: { type: integer }
+            looked: { type: integer }
+            returned: { type: integer }
+        records:
+          type: array
+          items: { $ref: "#/components/schemas/Record" }
+    Record:
+      type: object
+      properties:
+        n: { type: integer, description: Position in this list (1-based) }
+        id: { type: string, example: rec_53a6b77d1a3f }
+        release_id: { type: integer, description: Discogs release (0 = not matched) }
+        artist: { type: string }
+        title: { type: string }
+        label: { type: string }
+        catno: { type: string }
+        format: { type: string }
+        year: { type: string }
+        country: { type: string }
+        genres: { type: array, items: { type: string } }
+        styles: { type: array, items: { type: string } }
+        discogs_url: { type: string }
+        source: { type: string, example: "hardwax:this-week" }
+        kind: { type: string, enum: [database, shop, press, radio, mixed, youtube] }
+        note: { type: string, description: The source's own words }
+        source_url: { type: string }
+        tags: { type: array, items: { type: string } }
+        price: { type: string }
+        videos:
+          type: array
+          items:
+            type: object
+            properties:
+              url: { type: string }
+              title: { type: string }
+              source: { type: string }
+        audio: { type: array, items: { type: object } }
+        listen_url: { type: string }
+        youtube_search_url: { type: string }
+        saved_at: { type: string }
+        my_note: { type: string }
+        origin: { type: string, enum: [crate, youtube] }
+    Dig:
+      type: object
+      properties:
+        id: { type: integer }
+        at: { type: string, format: date-time }
+        command: { type: string }
+        tracked: { type: boolean, description: Its records were marked seen }
+        count: { type: integer }
+    DigestRun:
+      type: object
+      properties:
+        id: { type: integer }
+        digest: { type: string }
+        date: { type: string, format: date }
+        started_at: { type: string, format: date-time }
+        finished_at: { type: string, format: date-time }
+        status: { type: string, enum: [sent, skipped, failed, dry-run] }
+        recipients: { type: integer }
+        records: { type: integer }
+        host: { type: string }
+        message: { type: string }
+    SyncResult:
+      type: object
+      properties:
+        pages: { type: integer }
+        checked: { type: integer }
+        new: { type: integer }
+        new_saved: { type: integer }
+        unliked: { type: integer }
+        total: { type: integer }
+        new_titles: { type: array, items: { type: string } }
+    Source:
+      type: object
+      properties:
+        name: { type: string, example: hardwax }
+        kind: { type: string, enum: [shop, press, radio, mixed] }
+        location: { type: string }
+        description: { type: string }
+        homepage: { type: string }
+        via: { type: string }
+        sections:
+          type: array
+          description: The first is the default
+          items:
+            type: object
+            properties:
+              name: { type: string }
+              description: { type: string }
+        free_section: { type: boolean, description: "Any section word works (e.g. an NTS show slug)" }
+        tags: { type: boolean, description: Takes Bandcamp-style tags }
+        episodes: { type: boolean, description: Radio; takes episodes }

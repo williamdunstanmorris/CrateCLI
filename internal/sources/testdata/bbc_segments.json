@@ -1,0 +1,175 @@
+{
+ "segment_events": [
+  {
+   "title": null,
+   "pid": "p0pmz8c3",
+   "short_synopsis": "",
+   "medium_synopsis": "",
+   "long_synopsis": "",
+   "version_offset": 16,
+   "position": 1,
+   "is_chapter": false,
+   "has_snippet": false,
+   "segment": {
+    "type": "music",
+    "pid": "p0pmz8c1",
+    "duration": 75,
+    "primary_contributor": {
+     "pid": "p018dq49",
+     "musicbrainz_gid": "5c71ea68-9238-4dfc-8519-bd6eff6bc28b",
+     "name": "Jaga Jazzist"
+    },
+    "artist": "Jaga Jazzist",
+    "track_title": "Press Play",
+    "track_number": null,
+    "publisher": null,
+    "record_label": null,
+    "release_title": "A Livingroom Hush",
+    "record_id": "n2jqg3",
+    "catalogue_number": null,
+    "contributions": [
+     {
+      "pid": "p018dq49",
+      "name": "Jaga Jazzist",
+      "role": "Performer",
+      "musicbrainz_gid": "5c71ea68-9238-4dfc-8519-bd6eff6bc28b"
+     }
+    ],
+    "title": "Press Play",
+    "short_synopsis": null,
+    "medium_synopsis": null,
+    "long_synopsis": null
+   }
+  },
+  {
+   "title": null,
+   "pid": "p0pmz8dj",
+   "short_synopsis": "",
+   "medium_synopsis": "",
+   "long_synopsis": "",
+   "version_offset": 90,
+   "position": 2,
+   "is_chapter": false,
+   "has_snippet": false,
+   "segment": {
+    "type": "music",
+    "pid": "p0pmz8dg",
+    "duration": 205,
+    "primary_contributor": {
+     "pid": "p01l6zry",
+     "musicbrainz_gid": "de86cb9f-f648-4985-82ce-106711f98e91",
+     "name": "Memotone"
+    },
+    "artist": "Memotone",
+    "track_title": "Glimpse",
+    "track_number": null,
+    "publisher": null,
+    "record_label": "World of Echo",
+    "release_title": "Smallest things",
+    "record_id": "n93g98",
+    "catalogue_number": null,
+    "contributions": [
+     {
+      "pid": "p01l6zry",
+      "name": "Memotone",
+      "role": "Performer",
+      "musicbrainz_gid": "de86cb9f-f648-4985-82ce-106711f98e91"
+     }
+    ],
+    "title": "Glimpse",
+    "short_synopsis": null,
+    "medium_synopsis": null,
+    "long_synopsis": null
+   }
+  },
+  {
+   "title": null,
+   "pid": "p0pmz8nz",
+   "short_synopsis": "",
+   "medium_synopsis": "",
+   "long_synopsis": "",
+   "version_offset": 363,
+   "position": 3,
+   "is_chapter": false,
+   "has_snippet": false,
+   "segment": {
+    "type": "music",
+    "pid": "p0pmz8nx",
+    "duration": 172,
+    "primary_contributor": {
+     "pid": "p0mbqh53",
+     "musicbrainz_gid": "621d5f68-2324-43fc-8258-3f3bdabe1628",
+     "name": "Suzan Peeters"
+    },
+    "artist": "Suzan Peeters",
+    "track_title": "Linnen",
+    "track_number": null,
+    "publisher": null,
+    "record_label": "bickwinkel",
+    "release_title": "Cassotto",
+    "record_id": "n9dqzc",
+    "catalogue_number": null,
+    "contributions": [
+     {
+      "pid": "p0mbqh53",
+      "name": "Suzan Peeters",
+      "role": "Performer",
+      "musicbrainz_gid": "621d5f68-2324-43fc-8258-3f3bdabe1628"
+     }
+    ],
+    "title": "Linnen",
+    "short_synopsis": null,
+    "medium_synopsis": null,
+    "long_synopsis": null
+   }
+  },
+  {
+   "title": null,
+   "pid": "p0pmz8sx",
+   "short_synopsis": "",
+   "medium_synopsis": "",
+   "long_synopsis": "",
+   "version_offset": 552,
+   "position": 4,
+   "is_chapter": false,
+   "has_snippet": false,
+   "segment": {
+    "type": "music",
+    "pid": "p0pmz8sv",
+    "duration": 332,
+    "primary_contributor": {
+     "pid": "p01rq5tm",
+     "musicbrainz_gid": "5d961da6-517e-4f74-a7f3-5cd8a68b1dc0",
+     "name": "AGF"
+    },
+    "artist": "AGF",
+    "track_title": "Letters",
+    "track_number": null,
+    "publisher": null,
+    "record_label": null,
+    "release_title": "The Theory of Voice",
+    "record_id": "n9dqzx",
+    "catalogue_number": null,
+    "contributions": [
+     {
+      "pid": "p01rq5tm",
+      "name": "AGF",
+      "role": "Performer",
+      "musicbrainz_gid": "5d961da6-517e-4f74-a7f3-5cd8a68b1dc0"
+     }
+    ],
+    "title": "Letters",
+    "short_synopsis": null,
+    "medium_synopsis": null,
+    "long_synopsis": null
+   }
+  },
+  {
+   "segment": {
+    "type": "speech",
+    "title": "Chat",
+    "track_title": null
+   }
+  }
+ ]
+}

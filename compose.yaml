@@ -1,0 +1,42 @@
+# Local stack for developing the API: cratecli serve + Mailpit, a fake mail
+# server that catches every email in a web inbox (nothing is really sent).
+#
+#   docker compose up --build
+#   open http://localhost:8025              # Mailpit: the caught emails
+#   curl -H "Authorization: Bearer dev-token" localhost:8080/v1/digests
+#
+# Digests come from deploy/local/digests.yaml. Data lives in the
+# crate-data volume (docker compose down -v deletes it).
+
+services:
+  crate:
+    build:
+      context: .
+      args:
+        VERSION: compose
+    image: cratecli:dev
+    command: ["serve", "--schedule"]
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      CRATECLI_API_TOKEN: ${CRATECLI_API_TOKEN:-dev-token}
+      DISCOGS_TOKEN: ${DISCOGS_TOKEN:-}
+      CRATECLI_SMTP_HOST: mailpit
+      CRATECLI_SMTP_PORT: "1025"
+      CRATECLI_DIGESTS: /local/digests.yaml
+    volumes:
+      - crate-data:/data
+      - ./deploy/local:/local:ro
+    depends_on:
+      - mailpit
+    restart: unless-stopped
+
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - "127.0.0.1:8025:8025"   # web inbox
+      - "127.0.0.1:1025:1025"   # SMTP, so the CLI on your Mac can send here too
+    restart: unless-stopped
+
+volumes:
+  crate-data:

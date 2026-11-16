@@ -1,0 +1,1222 @@
+[
+ {
+  "id": 756039,
+  "date": "2026-11-13T02:15:52",
+  "date_gmt": "2026-11-13T01:15:52",
+  "modified": "2026-11-13T20:35:48",
+  "modified_gmt": "2026-11-13T19:35:48",
+  "slug": "aja-shimo-naps-chxiv027",
+  "status": "publish",
+  "type": "product",
+  "link": "https://yoyaku.io/release/aja-shimo-naps-chxiv027/",
+  "title": {
+   "rendered": "Shimo Naps"
+  },
+  "excerpt": {
+   "rendered": "<p>Born from an encounter initiated in Tokyo in 2024, shimo naps is a collaborative EP by French artist Aja (harp, synths) and Japanese pianist Mami Konishi (piano, synths).<br />\nRecorded over three days in Shimokitazawa and later shaped remotely, the record preserves the feeling of those suspended moments: the spontaneity, the original sound, and the magic of those unguarded improvisations.<br />\nThe project began with the idea of creating music around the moments between wakefulness and sleep, exploring that fleeting state where the mind begins to wander. The pieces slowly drift into that in-between space, where time slows down and wakefulness begins to fade, giving the EP its name: shimo naps.<br />\nCinematic, meditative and hypnotic, shimo naps unfolds in the blurred space where consciousness begins to loosen its grip, a place where sounds linger, time stretches, and the line between listening and dreaming starts to disappear.</p>\n",
+   "protected": false
+  },
+  "featured_media": 757169,
+  "template": "",
+  "product_brand": [],
+  "product_cat": [
+   12538
+  ],
+  "product_tag": [
+   38694,
+   40132,
+   32093,
+   38342
+  ],
+  "giftcard-category": [],
+  "musicartist": [
+   42670,
+   30935
+  ],
+  "musiclabel": [
+   28690
+  ],
+  "musicstyle": [
+   37890,
+   37919
+  ],
+  "distributormusic": [
+   10816
+  ],
+  "musicyear": [],
+  "musiccountry": [
+   39568
+  ],
+  "weekmusic": [
+   38991
+  ],
+  "_embedded": {
+   "wp:term": [
+    [],
+    [
+     {
+      "id": 12538,
+      "link": "https://yoyaku.io/category/arrivals/",
+      "name": "Arrivals",
+      "slug": "arrivals",
+      "taxonomy": "product_cat",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_cat/12538",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_cat"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/product_cat"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?product_cat=12538"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     }
+    ],
+    [
+     {
+      "id": 38694,
+      "link": "https://yoyaku.io/tag/b2b/",
+      "name": "B2B",
+      "slug": "b2b",
+      "taxonomy": "product_tag",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag/38694",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/product_tag"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?product_tag=38694"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     },
+     {
+      "id": 40132,
+      "link": "https://yoyaku.io/tag/dashboardkay/",
+      "name": "DashboardKay",
+      "slug": "dashboardkay",
+      "taxonomy": "product_tag",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag/40132",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/product_tag"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?product_tag=40132"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     },
+     {
+      "id": 32093,
+      "link": "https://yoyaku.io/tag/exclusives/",
+      "name": "exclusives",
+      "slug": "exclusives",
+      "taxonomy": "product_tag",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag/32093",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/product_tag"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?product_tag=32093"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     },
+     {
+      "id": 38342,
+      "link": "https://yoyaku.io/tag/yydistribution/",
+      "name": "yydistribution",
+      "slug": "yydistribution",
+      "taxonomy": "product_tag",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag/38342",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/product_tag"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?product_tag=38342"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     }
+    ],
+    [],
+    [
+     {
+      "id": 30935,
+      "link": "https://yoyaku.io/artist/aja/",
+      "name": "Aja",
+      "slug": "aja",
+      "taxonomy": "musicartist",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicartist/30935",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicartist"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/musicartist"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?musicartist=30935"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     },
+     {
+      "id": 42670,
+      "link": "https://yoyaku.io/artist/mami-konishi/",
+      "name": "Mami Konishi",
+      "slug": "mami-konishi",
+      "taxonomy": "musicartist",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicartist/42670",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicartist"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/musicartist"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?musicartist=42670"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     }
+    ],
+    [
+     {
+      "id": 28690,
+      "link": "https://yoyaku.io/label/chapelle-xiv-music/",
+      "name": "Chapelle XIV Music",
+      "slug": "chapelle-xiv-music",
+      "taxonomy": "musiclabel",
+      "default_distributor": {
+       "term_id": 10816,
+       "name": "yydistribution",
+       "slug": "yydistribution"
+      },
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musiclabel/28690",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musiclabel"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/musiclabel"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?musiclabel=28690"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     }
+    ],
+    [
+     {
+      "id": 37890,
+      "link": "https://yoyaku.io/style/ambient/",
+      "name": "Ambient",
+      "slug": "ambient",
+      "taxonomy": "musicstyle",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicstyle/37890",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicstyle"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/musicstyle"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?musicstyle=37890"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     },
+     {
+      "id": 37919,
+      "link": "https://yoyaku.io/style/downtempo/",
+      "name": "Downtempo",
+      "slug": "downtempo",
+      "taxonomy": "musicstyle",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicstyle/37919",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicstyle"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/musicstyle"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?musicstyle=37919"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     }
+    ],
+    [
+     {
+      "id": 10816,
+      "link": "https://yoyaku.io/distributormusic/yydistribution/",
+      "name": "yydistribution",
+      "slug": "yydistribution",
+      "taxonomy": "distributormusic",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/distributormusic/10816",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/distributormusic"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/distributormusic"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?distributormusic=10816"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     }
+    ],
+    [],
+    [
+     {
+      "id": 39568,
+      "link": "https://yoyaku.io/country/japan/",
+      "name": "Japan",
+      "slug": "japan",
+      "taxonomy": "musiccountry",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musiccountry/39568",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musiccountry"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/musiccountry"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?musiccountry=39568"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     }
+    ],
+    [
+     {
+      "id": 38991,
+      "link": "https://yoyaku.io/weekmusic/47/",
+      "name": "47",
+      "slug": "47",
+      "taxonomy": "weekmusic",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/weekmusic/38991",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/weekmusic"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/weekmusic"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?weekmusic=38991"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     }
+    ]
+   ]
+  }
+ },
+ {
+  "id": 745603,
+  "date": "2026-11-12T17:58:58",
+  "date_gmt": "2026-11-12T16:58:58",
+  "modified": "2026-11-13T11:06:08",
+  "modified_gmt": "2026-11-13T10:06:08",
+  "slug": "kokla-motion-state-s2s001",
+  "status": "publish",
+  "type": "product",
+  "link": "https://yoyaku.io/release/kokla-motion-state-s2s001/",
+  "title": {
+   "rendered": "Motion State"
+  },
+  "excerpt": {
+   "rendered": "<p>S2S001 marks the debut release on Side2Side, introducing both the label and its founder, Kokla. A DJ, producer, and dedicated record collector, Kokla channels years of digging and dancefloor experience into music designed with selectors firmly in mind. Across four groove-led cuts, house, techno, and acid converge through rolling rhythms, subtle progression, and finely crafted textures. Built for long nights and longer sets, the record favours timeless functionality over fleeting trends.<br />\nFounded in Cairo and shaped by a global perspective, Side2Side is a home for carefully curated electronic music rooted in movement, connection, and vinyl culture. Every release is conceived as a document of its time, crafted for selectors, dancers, and those who believe the smallest details leave the deepest impression.<br />\nMusic without borders. Movement without hierarchy. This is Side2Side.</p>\n",
+   "protected": false
+  },
+  "featured_media": 760891,
+  "template": "",
+  "product_brand": [],
+  "product_cat": [
+   12538
+  ],
+  "product_tag": [
+   38694,
+   41600,
+   40132,
+   32093,
+   38342
+  ],
+  "giftcard-category": [],
+  "musicartist": [
+   41982
+  ],
+  "musiclabel": [
+   41983
+  ],
+  "musicstyle": [
+   37884,
+   37955,
+   38021
+  ],
+  "distributormusic": [
+   10816
+  ],
+  "musicyear": [],
+  "musiccountry": [],
+  "weekmusic": [
+   38991
+  ],
+  "_embedded": {
+   "wp:term": [
+    [],
+    [
+     {
+      "id": 12538,
+      "link": "https://yoyaku.io/category/arrivals/",
+      "name": "Arrivals",
+      "slug": "arrivals",
+      "taxonomy": "product_cat",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_cat/12538",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_cat"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/product_cat"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?product_cat=12538"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     }
+    ],
+    [
+     {
+      "id": 38694,
+      "link": "https://yoyaku.io/tag/b2b/",
+      "name": "B2B",
+      "slug": "b2b",
+      "taxonomy": "product_tag",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag/38694",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/product_tag"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?product_tag=38694"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     },
+     {
+      "id": 41600,
+      "link": "https://yoyaku.io/tag/barcelona-store/",
+      "name": "barcelona-store",
+      "slug": "barcelona-store",
+      "taxonomy": "product_tag",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag/41600",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/product_tag"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?product_tag=41600"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     },
+     {
+      "id": 40132,
+      "link": "https://yoyaku.io/tag/dashboardkay/",
+      "name": "DashboardKay",
+      "slug": "dashboardkay",
+      "taxonomy": "product_tag",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag/40132",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/product_tag"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?product_tag=40132"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     },
+     {
+      "id": 32093,
+      "link": "https://yoyaku.io/tag/exclusives/",
+      "name": "exclusives",
+      "slug": "exclusives",
+      "taxonomy": "product_tag",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag/32093",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/product_tag"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?product_tag=32093"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     },
+     {
+      "id": 38342,
+      "link": "https://yoyaku.io/tag/yydistribution/",
+      "name": "yydistribution",
+      "slug": "yydistribution",
+      "taxonomy": "product_tag",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag/38342",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product_tag"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/product_tag"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?product_tag=38342"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     }
+    ],
+    [],
+    [
+     {
+      "id": 41982,
+      "link": "https://yoyaku.io/artist/kokla/",
+      "name": "KOKLA",
+      "slug": "kokla",
+      "taxonomy": "musicartist",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicartist/41982",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicartist"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/musicartist"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?musicartist=41982"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     }
+    ],
+    [
+     {
+      "id": 41983,
+      "link": "https://yoyaku.io/label/side2side/",
+      "name": "Side2Side",
+      "slug": "side2side",
+      "taxonomy": "musiclabel",
+      "default_distributor": null,
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musiclabel/41983",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musiclabel"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/musiclabel"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?musiclabel=41983"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     }
+    ],
+    [
+     {
+      "id": 37884,
+      "link": "https://yoyaku.io/style/acid/",
+      "name": "Acid",
+      "slug": "acid",
+      "taxonomy": "musicstyle",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicstyle/37884",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicstyle"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/musicstyle"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?musicstyle=37884"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     },
+     {
+      "id": 37955,
+      "link": "https://yoyaku.io/style/house/",
+      "name": "House",
+      "slug": "house",
+      "taxonomy": "musicstyle",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicstyle/37955",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicstyle"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/musicstyle"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?musicstyle=37955"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     },
+     {
+      "id": 38021,
+      "link": "https://yoyaku.io/style/techno/",
+      "name": "Techno",
+      "slug": "techno",
+      "taxonomy": "musicstyle",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicstyle/38021",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/musicstyle"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/musicstyle"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?musicstyle=38021"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     }
+    ],
+    [
+     {
+      "id": 10816,
+      "link": "https://yoyaku.io/distributormusic/yydistribution/",
+      "name": "yydistribution",
+      "slug": "yydistribution",
+      "taxonomy": "distributormusic",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/distributormusic/10816",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/distributormusic"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/distributormusic"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?distributormusic=10816"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     }
+    ],
+    [],
+    [],
+    [
+     {
+      "id": 38991,
+      "link": "https://yoyaku.io/weekmusic/47/",
+      "name": "47",
+      "slug": "47",
+      "taxonomy": "weekmusic",
+      "_links": {
+       "self": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/weekmusic/38991",
+         "targetHints": {
+          "allow": [
+           "GET"
+          ]
+         }
+        }
+       ],
+       "collection": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/weekmusic"
+        }
+       ],
+       "about": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/taxonomies/weekmusic"
+        }
+       ],
+       "wp:post_type": [
+        {
+         "href": "https://yoyaku.io/wp-json/wp/v2/product?weekmusic=38991"
+        }
+       ],
+       "curies": [
+        {
+         "name": "wp",
+         "href": "https://api.w.org/{rel}",
+         "templated": true
+        }
+       ]
+      }
+     }
+    ]
+   ]
+  }
+ }
+]

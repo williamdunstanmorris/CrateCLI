@@ -1,0 +1,70 @@
+{
+ "children": {
+  "page": 1,
+  "total": 2116,
+  "limit": 10,
+  "offset": 0,
+  "programmes": [
+   {
+    "type": "episode",
+    "pid": "m003538w",
+    "title": "18/12/2026",
+    "first_broadcast_date": "2026-12-18T22:00:00Z"
+   },
+   {
+    "type": "episode",
+    "pid": "m0034ytk",
+    "title": "11/12/2026",
+    "first_broadcast_date": "2026-12-11T22:00:00Z"
+   },
+   {
+    "type": "episode",
+    "pid": "m0034k30",
+    "title": "Frosty minimalism, foggy voices and swampy cumbia",
+    "first_broadcast_date": "2026-12-04T22:00:00Z"
+   },
+   {
+    "type": "episode",
+    "pid": "m0034cjq",
+    "title": "Radiant incantations",
+    "first_broadcast_date": "2026-11-27T22:00:00Z"
+   },
+   {
+    "type": "episode",
+    "pid": "m0034019",
+    "title": "Byron Wallen’s Mixtape",
+    "first_broadcast_date": "2026-11-20T22:00:00Z"
+   },
+   {
+    "type": "episode",
+    "pid": "m0033nb2",
+    "title": "Suzan Peeters and Memotone in session",
+    "first_broadcast_date": "2026-11-13T22:15:00Z"
+   },
+   {
+    "type": "episode",
+    "pid": "m0033fp2",
+    "title": "Fire Music",
+    "first_broadcast_date": "2026-11-06T22:00:00Z"
+   },
+   {
+    "type": "episode",
+    "pid": "m0033h59",
+    "title": "James Acaster’s mixtape",
+    "first_broadcast_date": "2026-10-30T22:00:00Z"
+   },
+   {
+    "type": "episode",
+    "pid": "m0032s67",
+    "title": "Reason, wake up from sleep!",
+    "first_broadcast_date": "2026-10-23T22:00:00+01:00"
+   },
+   {
+    "type": "episode",
+    "pid": "m0032hy0",
+    "title": "Emily Wittbrodt and Regan Bowering in session",
+    "first_broadcast_date": "2026-10-16T22:00:00+01:00"
+   }
+  ]
+ }
+}
