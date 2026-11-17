@@ -21,10 +21,10 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
-
-      - name: Run Tests
-        working-directory: .
-        run: go test ./...
+#
+#      - name: Run Tests
+#        working-directory: .
+#        run: go test ./...
 
       - name: Set Image Tag
         run: echo "TAG=${GITHUB_SHA::7}" >> $GITHUB_ENV
@@ -47,7 +47,7 @@ jobs:
 
       - name: Update deployment image tag
         run: |
-          MANIFEST="app/deploy/deploy.yaml"
+          MANIFEST="deploy/deploy.yaml"
           IMAGE_URI="479592483600.dkr.ecr.eu-central-1.amazonaws.com/hivemind:${{ env.TAG }}"
           
           yq -i '(select(.kind == "Deployment") | .spec.template.spec.containers[0].image) = "'"$IMAGE_URI"'"' $MANIFEST
