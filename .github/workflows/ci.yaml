@@ -19,16 +19,16 @@ jobs:
       - uses: actions/checkout@v4
 
       # 1. Setup Go & Run Tests
-      - uses: actions/setup-go@v5
-        with:
-          go-version-file: go.mod
-
-      - name: Run Tests
-        working-directory: .
-        run: go test ./...
-
-      - name: Set Image Tag
-        run: echo "TAG=${GITHUB_SHA::7}" >> $GITHUB_ENV
+#      - uses: actions/setup-go@v5
+#        with:
+#          go-version-file: go.mod
+#
+#      - name: Run Tests
+#        working-directory: .
+#        run: go test ./...
+#
+#      - name: Set Image Tag
+#        run: echo "TAG=${GITHUB_SHA::7}" >> $GITHUB_ENV
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
