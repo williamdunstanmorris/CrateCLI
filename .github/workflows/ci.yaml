@@ -40,14 +40,14 @@ jobs:
       - name: Build and Push Docker Image
         working-directory: .
         run: |
-          REGISTRY="479592483600.dkr.ecr.eu-central-1.amazonaws.com/hivemind"
+          REGISTRY="479592483600.dkr.ecr.eu-central-1.amazonaws.com/crate"
           docker build --platform linux/amd64 -t $REGISTRY:${{ env.TAG }} .
           docker push $REGISTRY:${{ env.TAG }}
 
       - name: Update deployment image tag
         run: |
           MANIFEST="deploy/deploy.yaml"
-          IMAGE_URI="479592483600.dkr.ecr.eu-central-1.amazonaws.com/hivemind:${{ env.TAG }}"
+          IMAGE_URI="479592483600.dkr.ecr.eu-central-1.amazonaws.com/crate:${{ env.TAG }}"
           
           yq -i '(select(.kind == "Deployment") | .spec.template.spec.containers[0].image) = "'"$IMAGE_URI"'"' $MANIFEST
           yq -i '(select(.kind == "Deployment") | .spec.template.spec.containers[0].env[] | select(.name == "HELLO_TAG").value) = "'"${{ env.TAG }}"'"' $MANIFEST
