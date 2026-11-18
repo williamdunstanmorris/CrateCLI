@@ -5,7 +5,6 @@ on:
     branches: [main]
     paths-ignore:
       - "deploy/**"
-      - "app/deploy/**"
       - "**.md"
 
 permissions:
@@ -39,7 +38,7 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v2
 
       - name: Build and Push Docker Image
-        working-directory: app/src
+        working-directory: .
         run: |
           REGISTRY="479592483600.dkr.ecr.eu-central-1.amazonaws.com/hivemind"
           docker build --platform linux/amd64 -t $REGISTRY:${{ env.TAG }} .
