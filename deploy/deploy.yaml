@@ -52,13 +52,13 @@ metadata:
   namespace: crate
   annotations:
     alb.ingress.kubernetes.io/group.name: shared
-    alb.ingress.kubernetes.io/load-balance
+    alb.ingress.kubernetes.io/load-balancer-name: shared-alb
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type:
+    alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
-    alb.ingress.kubernetes.io/ssl-redirect
+    alb.ingress.kubernetes.io/ssl-redirect: "443"
     alb.ingress.kubernetes.io/healthcheck-path: /healthz
-    alb.ingress.kubernetes.io/target-groupn_delay.timeout_seconds=30
+    alb.ingress.kubernetes.io/target-group-attributes: deregistration_delay.timeout_seconds=30
 spec:
   ingressClassName: alb
   rules:
@@ -68,7 +68,7 @@ spec:
           - path: /
             pathType: Prefix
             backend:
-              service: { name: crate, port
+              service: { name: crate, port: { number: 80 } }
 ---
 apiVersion: policy/v1
 kind: PodDisruptionBudget
