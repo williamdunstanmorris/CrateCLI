@@ -33,8 +33,6 @@ func numbered(recs []crate.Record) []Record {
 	return out
 }
 
-// ---------------------------------------------------------------- sources
-
 func (s *Server) listSources(w http.ResponseWriter, _ *http.Request) {
 	var out []sources.Info
 	for _, src := range sources.Sorted(s.Service.Sources) {
